@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8" />
+        <title>Funções</title>
+
+        <script type="text/javascript">
+
+            //função sem parâmetros
+            function ola(){
+                //Fazer alguma coisa aqui...
+                document.write("Aula de Javascript");
+            }
+
+            function calcular(valor1, valor2){
+
+                var resultado = valor1 * valor2;
+
+                return resultado;
+
+            }
+
+            //ola(); //executar função ao carregar página 
+            //calcular(3, 4);
+
+            function AlterarCor(){
+
+                document.bgColor = document.getElementById("cor").value;
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <h2>Selecione a cor de fundo: </h2>
+        <input type="color" id="cor" onchange="AlterarCor()"/>
+    </body>
+</html>
