@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form>
+
+        <p>
+            <label>Nome: </label>
+            <input type="text" name="nome" placeholder="Digite seu nome..." /> <!-- tag self-close -->
+        </p>
+        
+        <p>
+             <label>Usuário: </label>
+            <input type="text" name="usuario" placeholder="Digite seu usuário..." />
+        </p>
+       
+        <p>
+            <label>Senha: </label>
+            <input type="password" name="senha" placeholder="Digite sua senha..." />
+        </p>
+
+        <p>
+            <label>Cidade: </label>
+            <!-- <input type="text" name="cidade"  value="Bebedouro"/> -->
+            <input type="text" name="cidade" placeholder="Digite sua cidade..."/>
+        </p>
+
+        <p>
+            <label>Endereço: </label>
+            <input type="text" name="endereco" placeholder="Digite seu endereço..." size="35"/>
+        </p>
+
+        <p>
+            <label>Qtd filhos: </label>
+            <input type="text" name="qtdfilhos" placeholder="Digite a qtd de filhos..." maxlength="2"/>
+        </p>
+        <hr/>
+
+        <p>
+            <label>Qual seu esporte favorito?</label> <br/>
+            <input type="checkbox" name="esporte" >Basquete <br/>
+            <input type="checkbox" name="esporte" >Bocha <br/>
+            <input type="checkbox" name="esporte" >Vôlei <br/>
+            <input type="checkbox" name="esporte" >Futeol <br/>
+        </p>
+
+        <p>
+            <label>Qual é o seu time?</label> <br/>
+            <input type="radio" name="time" />Corinthians <br/>
+            <input type="radio" name="time" />Internacional <br/>
+            <input type="radio" name="time" />Cruzeiro <br/>
+            <input type="radio" name="time" />São Paulo <br/>
+        </p>
+
+        <p>
+            <label>Escolha um sabor: </label>
+            <select name="sabor">
+                <option>Abacaxi</option>
+                <option>Chocolate</option>
+                <option>Kiwi</option>
+                <option>Pistache</option>
+                <option>Morango</option>
+            </select>
+        </p>
+
+        <p>
+            <textarea cols="40" rows="5" placeholder="Deixe seu comentário..."></textarea>
+        </p>
+
+        <p>
+            <input type="reset" name="Resetar">
+            <input type="submit" value="Enviar formulário">
+        </p>
+
+    </form>
+</body>
+</html>

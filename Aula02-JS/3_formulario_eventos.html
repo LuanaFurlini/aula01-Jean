@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário - Eventos</title>
+
+    <script type="text/javascript">
+
+        function Multiplicar(){
+            var v1, v1 = 0;
+            v1 = document.getElementById('valor1').value
+            v2 = document.getElementById('valor2').value
+
+            document.getElementById('resultado').value = (v1 * v2);
+        }
+
+        function Subtrair(){
+            var v1, v1 = 0;
+            v1 = document.getElementById('valor1').value
+            v2 = document.getElementById('valor2').value
+
+            document.getElementById('resultado').value = (v1 - v2);
+        }
+        
+
+    </script>
+
+</head>
+<body>
+
+    <form>
+            <p>
+                <label>Valor1</label>
+                <input type="text" id="valor1"> 
+            </p>
+           
+            <p>
+                <label>Valor2</label>
+                <input type="text" id="valor2">
+            </p>
+
+            <p>
+                <label>Resultado</label>
+                <input type="text" id="resultado">
+            </p>
+
+             <p>
+                <button type="button" value="Multiplicar" onclick="Multiplicar()">Multiplicar</button>
+                <button type="button" value="Subtrair" onclick="Subtrair()">Subtrair</button>
+             </p>
+    </form>
+
+
+
+</body>
+</html>
