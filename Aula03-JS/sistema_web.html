@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sistema de Vendas</title>
+  
+    <script type="text/javascript"> 
+    //JS aqui...
+
+    function calcular(){
+        var qtd = document.getElementById("quantidade").value;
+        var prc = document.getElementById("preco").value;
+
+        //isNaN: is Not a Number?
+        if(isNaN(qtd))
+            qtd = 0;
+    
+        if(isNaN(prc))
+            prc = 0;
+
+        var subt = qtd * prc;
+
+        var marcacao_desct = document.getElementById("desct").checked;
+
+        var valor_desconto = 0;
+        if(marcacao_desct)
+            valor_desconto = subt * 0.05; //5% de desconto
+
+        var total = subt - valor_desconto;
+
+        document.getElementById("subtotal").value = subt.toFixed(2);
+        document.getElementById("total").value = total.toFixed(2);
+    }
+
+    function exibir(){
+        if (document.getElementById("nome").value == "")
+            alert("Obrigatório o preenchimento do nome!")
+
+        else{
+            //apresentar o resumo do pedido
+            document.getElementById("pedidos").innerHTML = 
+            "<b>Pedidos<b/> <br/>" +
+            "<b>Nome: <b/>" + document.getElementById("nome").value + "<br/>" +
+            "<b>Total: <b/>" + document.getElementById("total").value;
+
+        }
+    }
+
+    </script>
+
+</head> 
+<body>
+
+<form>
+    <b>.:: Sistema para vendas ::.</b>
+    <br />
+
+    <p>
+        <label>Nome: </label>
+        <input type="text" id="nome" />
+    </p>
+
+    <p>
+        <label>Quantidade: </label>
+        <input type="text" id="quantidade" onchange="calcular()"/>
+    </p>
+
+    <p>
+        <label>Preço: </label>
+        <input type="text" id="preco" onchange="calcular()"/>
+    </p>
+
+    <p>
+        <label>Subtotal: </label>
+        <input type="text" id="subtotal" />
+    </p>
+
+    <p>
+        <label>Desconto: </label>
+        <input type="checkbox" id="desct" onchange="calcular()"/>
+    </p>
+
+    <p>
+        <label>Total: </label>
+        <input type="text" id="total" />
+    </p>
+
+    <input type="button" value="Confirmar" onclick="exibir()"/>
+</form>
+
+    <div id="pedidos"></div>
+
+</body>
+</html>

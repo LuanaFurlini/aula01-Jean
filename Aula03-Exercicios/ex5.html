@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 5</title>
+    <script type="text/javascript">
+
+           function verSalario(){
+            var salarioAtual = parseFloat(document.getElementById("salario").value);
+            if (salarioAtual > 800){
+                var novoSalario = salarioAtual + (salarioAtual * 0.04);
+                alert("Novo salário com aumento de 4% = " + novoSalario);
+            }
+            else if(salarioAtual <= 800){
+                var novoSalario = salarioAtual + (salarioAtual * 0.08);
+                alert("Novo salário com aumento de 8% = " + novoSalario);
+            }
+        }
+    </script>
+</head>
+<body>  
+    <p>Informe seu salário: </p>
+    <input type="number" name="salario" id="salario" placeholder="digite aqui...">
+    <button type="button" onclick="verSalario()">Enviar</button>
+</body>
+</html>

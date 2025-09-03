@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 3</title>
+    <script text="text/javascript">
+        function verNota(){
+            var notaAluno = document.getElementById("nota").value
+            if (notaAluno >= 9 && notaAluno <= 10){
+                alert("Ótimo")
+            }
+            else if(notaAluno >= 7 && notaAluno <= 8){
+                alert("Bom")
+            }
+            else if(notaAluno >= 4 && notaAluno <= 6){
+                alert("Regular")
+            }
+             else if(notaAluno >= 0 && notaAluno <= 3){
+                alert("Insatisfatório")
+            } 
+        }
+    </script>
+</head>
+<body>
+    <p>Informe sua nota: </p>
+    <input type="text" name="nota" id="nota" placeholder="digite aqui...">
+    <button type="button" onclick="verNota()">Enviar</button>    
+</body>
+</html>

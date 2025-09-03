@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 2</title>
+    <script type="text/javascript">
+
+         function verIdade(){
+            var idadePessoa = document.getElementById("idade").value
+            if (idadePessoa >= 21){
+                alert("Pode participar da festa!")
+            }
+            else{
+                alert("Acesso negado!")
+            }
+        }
+    </script>
+</head>
+<body> 
+    <p>Informe sua idade: </p>
+    <input type="text" name="idade" id="idade" placeholder="digite aqui...">
+    <button type="button" onclick="verIdade()">Enviar</button>
+</body>
+</html>
