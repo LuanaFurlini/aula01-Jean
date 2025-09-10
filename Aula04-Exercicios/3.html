@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+
+    <script type="text/javascript">
+        
+        function Cadastrar(){
+            var nome = document.getElementById("campo1").value
+            var sobrenome = document.getElementById("campo2").value
+            var idade = document.getElementById("campo3").value
+            var email = document.getElementById("campo4").value
+            var senha = document.getElementById("campo5").value
+
+             if(nome == "" || sobrenome == "" || idade == "" || email == "" || senha == "")
+                alert("O preenchimento dos campos é obrigatório");
+            
+            else
+            alert("Cadastro efetuado com sucesso")
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <p>
+            <label>Nome</label>
+            <input type="text" id="campo1">
+        </p>
+        <p>
+            <label>Sobrenome</label>
+            <input type="text" id="campo2">
+        </p>
+        <p>
+            <label>Idade</label>
+            <input type="text" id="campo3">
+        </p>
+        <p>
+            <label>Email</label>
+            <input type="text" id="campo4">
+        </p>
+        <p>
+            <label>Senha</label>
+            <input type="password" id="campo5">
+        </p>
+        <p>
+            <input type="button" value="cadastrar" id="verificar" onclick="Cadastrar()">
+        </p>
+    </form>
+</body>
+</html>

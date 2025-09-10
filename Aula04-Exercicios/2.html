@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+
+    <script type="text/javascript">
+        
+        function Soma(){
+            var v = document.getElementById("valor").value
+            var soma = 0
+            for(var i = 0; i <= v ; i++){
+                soma += i
+            }
+            alert(soma)
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <p>
+            <label>Valor: </label>
+            <input type="text" id="valor" >
+        </p>
+        <p>
+            <input type="button" value="Verificar" id="botao" onclick="Soma()">
+        </p>
+    </form>
+</body>
+</html>
