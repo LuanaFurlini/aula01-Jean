@@ -5,16 +5,53 @@
     <title>Exercicio 4</title>
 
     <script type="text/javascript">
-        
-        var n1 = document.getElementById("nota1").value
-        var n2 = document.getElementById("nota2").value
 
         function Media(){
-
+            var n1 = document.getElementById("nota1").value;
+            var n2 = document.getElementById("nota2").value;
+            var media = (parseFloat(n1) + parseFloat(n2))/2;
+            
+            document.getElementById("valorMedia").innerHTML = "<b>Media: <b/>" + media;
         }
 
-        function MaiorMenor(){
+        function Maior(){
+            var n1 = parseFloat(document.getElementById("nota1").value);
+            var n2 = parseFloat(document.getElementById("nota2").value);
 
+            if(n1 > n2)
+            var maior = n1;
+
+            else if(n1 < n2)
+            var maior = n2;
+
+            document.getElementById("valorMaior").innerHTML = "<b>Maior nota: <b/>" + maior;
+        }
+
+        function Menor(){
+            var n1 = parseFloat(document.getElementById("nota1").value);
+            var n2 = parseFloat(document.getElementById("nota2").value);
+
+            if(n1 < n2)
+            var menor = n1;
+            
+            else if(n1 > n2)
+            var menor = n2;
+
+            document.getElementById("valorMenor").innerHTML = "<b>Menor nota: <b/>" + menor;
+        }
+
+        function Final(){
+            var n1 = parseFloat(document.getElementById("nota1").value);
+            var n2 = parseFloat(document.getElementById("nota2").value);
+
+            if((n1 + n2)/2 >= 6)
+            var sitFinal = "Aprovado!"
+
+            else if((n1 + n2)/2 < 6)
+            var sitFinal = "Reprovado!"
+
+            document.getElementById("situacaoFinal").innerHTML = 
+            "<b>Situação Final: <b/>" + sitFinal; 
         }
 
     </script>
@@ -23,23 +60,30 @@
     <form>
         <p>
             <label>Nota 1</label>
-            <input type="text" id="nota1">
+            <input type="text" id="nota1" placeholder="Digite a primeira nota...">
         </p>
         <p>
             <label>Nota 2</label>
-            <input type="text" id="nota2">
+            <input type="text" id="nota2" placeholder="Digite a segunda nota...">
         </p>
         <p>
-            <input type="button" value="Media" id="media">
+            <input type="button" value="Media" id="media" onclick="Media()">
+            
         </p>
         <p>
-            <input type="button" value="Maior Nota" id="maior">
+            <input type="button" value="Maior Nota" id="maior" onclick="Maior()">
         </p>
         <p>
-             <input type="button" value="Menor Nota" id="menor">
+             <input type="button" value="Menor Nota" id="menor" onclick="Menor()">
         </p>
         <p>
-            <input type="button" value="Situacao Final" id="situacao">
+            <input type="button" value="Situacao Final" id="situacao" onclick="Final()">
+        </p>
+        <p>
+            <div id="valorMedia"></div> 
+            <div id="valorMaior"></div>
+            <div id="valorMenor"></div>
+            <div id="situacaoFinal"></div>
         </p>
     </form>
 </body>
