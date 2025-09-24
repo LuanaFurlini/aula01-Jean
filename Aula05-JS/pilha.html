@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilha</title>
+
+    <script type="text/javascript">
+
+        const MAX = 5;
+        var base = 0, topo = 0;
+        var pilha = [];
+
+        //SE a função retornar TRUE, a pilha está VAZIA
+        function verificarVazia(){
+            return(base == topo);
+        }
+
+        //SE a função retornar TRUE, a pilha está CHEIA
+        function verificarCheia(){
+            return(topo == MAX);
+        }
+
+        //INSERE elemento na pilha
+        function inserir(valor){
+            //Se a pilha não estiver cheia, insere o elemento
+            if(!verificarCheia()){
+                //inserir o elemento
+                pilha[topo] = valor;
+                topo++;
+                console.log(`O valor ${valor} foi empilhado`);
+            }
+            else
+            console.log('Pilha CHEIA!');
+        }
+
+        //REMOVE elemento da pilha
+        function remover(){
+            var valorRemovido;
+            //SE a pilha não estiver vazia, remover o elemento.
+            if(!verificarVazia()){
+                //remover e apresentar o valor removido
+                valorRemovido = pilha[topo - 1];
+                topo--;
+                
+                console.log(`O valor ${valorRemovido} foi removido da pilha.`);
+
+                return valorRemovido;
+            }
+
+            else{
+                console.log("Pilha VAZIA!")
+                return 0;
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
